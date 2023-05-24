@@ -17,7 +17,7 @@ services:
       --log_timestamps=SYSTEM
     networks:
       tams-net:
-        ipv4_address: 192.168.1.100
+        ipv4_address: 172.16.1.100
     ports:
       - 13306:3306
     volumes:
@@ -34,7 +34,7 @@ services:
       - db
     networks:
       tams-net:
-        ipv4_address: 192.168.1.150
+        ipv4_address: 172.16.1.150
     ports:
       - 12010:12010
     volumes:
@@ -48,7 +48,7 @@ services:
       TZ: Asia/Shanghai
     networks:
       tams-net:
-        ipv4_address: 192.168.1.200
+        ipv4_address: 172.16.1.200
     ports:
       - "12011:80"
     volumes:
@@ -61,4 +61,4 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: "192.168.1.0/24"
+        - subnet: "172.16.1.0/24"
